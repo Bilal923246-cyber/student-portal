@@ -1,32 +1,67 @@
-/* Student Portal - style.css */
-/* Yahan apna Lecture 2 wala CSS likhna hai */
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
-  background-color: #f4f4f4;
-}
-
-main {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* Part E - Welcome Banner - jab branch me kaam karo ge tab ye active ho ga */
-.welcome-banner {
-  background-color: #1e3a8a;
-  color: white;
-  text-align: center;
-  padding: 30px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-.welcome-banner h1 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
+/* LGU Student Portal - LIGHT WHITE + BRIGHT COLOURS */
+* { box-sizing: border-box; margin:0; padding:0; }
+body { font-family: 'Segoe UI', Arial, sans-serif; background:#ffffff; color:#111827; line-height:1.5; }
+.topbar { background:#ffffff; border-bottom:3px solid #facc15; padding:12px 0; position:sticky; top:0; z-index:10; box-shadow:0 2px 12px rgba(0,0,0,0.08); }
+.topbar-inner { max-width:1150px; margin:0 auto; padding:0 16px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; }
+.logo-area { display:flex; gap:12px; align-items:center; }
+.lgu-logo { width:64px; height:64px; border-radius:50%; object-fit:cover; border:3px solid #16a34a; background:white; }
+.logo-area h1 { font-size:22px; color:#14532d; }
+.logo-area p { font-size:12px; color:#666; }
+.pill { padding:7px 13px; border-radius:20px; font-size:12px; font-weight:800; }
+.pill.blue { background:#dbeafe; color:#1e40af; }
+.pill.yellow { background:#fef9c3; color:#854d0e; border:1px solid #facc15; }
+.pill.green { background:#dcfce7; color:#166534; }
+.hero { position:relative; max-width:1150px; margin:16px auto 0; border-radius:18px; overflow:hidden; }
+.hero-img { width:100%; height:320px; object-fit:cover; display:block; }
+.hero-overlay { position:absolute; inset:0; background:linear-gradient(to right, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.85) 45%, rgba(255,255,255,0.10) 100%); display:flex; flex-direction:column; justify-content:center; padding:28px; }
+.hero-overlay h1 { font-size:36px; color:#14532d; margin-bottom:8px; }
+.hero-overlay p { max-width:520px; color:#333; font-weight:500; }
+.hero-stats { display:flex; gap:12px; flex-wrap:wrap; margin-top:14px; }
+.hero-stats span { background:#1e40af; color:white; padding:7px 12px; border-radius:20px; font-size:13px; font-weight:700; }
+.container { max-width:1150px; margin:0 auto; padding:18px 16px 40px; }
+.card { background:#ffffff; border:1.5px solid #e5e7eb; border-radius:16px; padding:18px; margin-bottom:16px; box-shadow:0 6px 20px rgba(0,0,0,0.06); }
+.card h2 { font-size:19px; margin-bottom:8px; color:#111827; }
+.muted { color:#6b7280; font-size:13px; }
+.login-card { border:2px solid #2563eb; background:#eff6ff; }
+.login-row { display:flex; gap:10px; flex-wrap:wrap; margin:12px 0; }
+.login-row input { flex:1; min-width:220px; padding:12px; border:2px solid #bfdbfe; border-radius:12px; font-size:14px; background:white; }
+.btn-primary { background:#2563eb; color:white; border:none; padding:12px 18px; border-radius:12px; cursor:pointer; font-weight:800; }
+.btn-secondary { background:#ffffff; border:2px solid #e5e7eb; padding:11px 14px; border-radius:12px; cursor:pointer; font-weight:700; }
+.chip-btn { background:#fef9c3; border:1.5px solid #facc15; padding:6px 11px; border-radius:20px; cursor:pointer; font-size:12px; font-weight:700; margin:4px; }
+.filters { display:flex; gap:10px; flex-wrap:wrap; margin:12px 0; }
+.filters input, .filters select { padding:11px; border:2px solid #e5e7eb; border-radius:12px; font-size:13px; flex:1; min-width:160px; background:#f9fafb; }
+.table-wrap { overflow-x:auto; margin-top:10px; }
+table { width:100%; border-collapse:collapse; font-size:13px; }
+th { background:#14532d; color:white; padding:11px; text-align:left; }
+td { padding:11px; border-bottom:1px solid #f3f4f6; background:white; }
+tr:hover td { background:#fefce8; }
+.btn-small { background:#2563eb; color:white; border:none; padding:7px 11px; border-radius:9px; cursor:pointer; font-size:12px; font-weight:700; }
+.dashboard-card { border:2.5px solid #16a34a; }
+.dash-header { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:14px; }
+.profile-grid { display:grid; grid-template-columns:300px 1fr; gap:14px; margin-bottom:16px; }
+@media(max-width:700px){ .profile-grid{grid-template-columns:1fr;} .hero-overlay h1{font-size:26px;} .hero-img{height:260px;} }
+.profile-card { background:#f0fdf4; border:2px solid #bbf7d0; border-radius:14px; padding:16px; text-align:center; }
+.avatar { width:82px; height:82px; border-radius:50%; background:#2563eb; color:white; display:flex; align-items:center; justify-content:center; font-size:26px; font-weight:900; margin:0 auto 10px; border:3px solid #facc15; }
+.profile-details { text-align:left; margin-top:12px; font-size:13px; }
+.stats-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.stat-card { border-radius:14px; padding:16px; display:flex; flex-direction:column; border:1.5px solid #e5e7eb; }
+.stat-card.blue{ background:#dbeafe; } .stat-card.green{ background:#dcfce7; } .stat-card.orange{ background:#ffedd5; } .stat-card.purple{ background:#e9d5ff; }
+.stat-label{ font-size:12px; font-weight:800; text-transform:uppercase; }
+.stat-value{ font-size:30px; font-weight:900; }
+.tabs { display:flex; gap:8px; flex-wrap:wrap; margin:14px 0; }
+.tab-btn { padding:11px 15px; border-radius:20px; border:1.5px solid #e5e7eb; background:#ffffff; cursor:pointer; font-weight:700; }
+.tab-btn.active { background:#14532d; color:white; border-color:#14532d; }
+.tab-content { display:none; }
+.tab-content.active { display:block; }
+.att-row { background:#f9fafb; border:1px solid #e5e7eb; border-radius:10px; padding:10px; margin:8px 0; }
+.bar { height:11px; background:#e5e7eb; border-radius:20px; overflow:hidden; margin-top:6px; }
+.bar-fill { height:100%; background:#16a34a; }
+.bar-fill.low { background:#ef4444; }
+.fee-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin:12px 0; }
+@media(max-width:600px){ .fee-grid{grid-template-columns:1fr;} }
+.fee-box { background:#f9fafb; border:1.5px solid #e5e7eb; border-radius:12px; padding:14px; display:flex; flex-direction:column; gap:4px; }
+.fee-box.green{ background:#dcfce7; } .fee-box.red{ background:#fee2e2; }
+.campus-img { width:100%; height:280px; object-fit:cover; border-radius:12px; margin-top:8px; }
+.campus-card { background:#fffbeb; border:2px solid #facc15; }
+.announce { background:#fffbeb; border-left:5px solid #facc15; padding:11px 12px; border-radius:8px; margin:8px 0; font-size:13px; }
+footer { text-align:center; padding:20px; color:#666; font-size:12px; background:#f9fafb; }
