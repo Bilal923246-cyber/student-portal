@@ -1,0 +1,32 @@
+/* Student Portal - style.css */
+/* Yahan apna Lecture 2 wala CSS likhna hai */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+main {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Part E - Welcome Banner - jab branch me kaam karo ge tab ye active ho ga */
+.welcome-banner {
+  background-color: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.welcome-banner h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
